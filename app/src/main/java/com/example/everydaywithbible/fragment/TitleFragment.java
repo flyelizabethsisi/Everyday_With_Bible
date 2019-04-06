@@ -107,7 +107,7 @@ public class TitleFragment extends Fragment implements SearchView.OnQueryTextLis
 
                         Log.d(TAG, response.getData().getStoryTitleList().get(0).getTitle() );
                         storyList = response.getData().getStoryTitleList();
-                        storyAdapter = new StoryAdapter(fragmentInterface, storyList);
+                        storyAdapter = new StoryAdapter(storyList,fragmentInterface);
                         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                         recyclerView.setAdapter(storyAdapter);
                         searchView.setOnQueryTextListener(TitleFragment.this);

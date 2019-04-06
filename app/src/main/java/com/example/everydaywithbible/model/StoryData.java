@@ -123,11 +123,13 @@ public class StoryData {
         this.paul_goes_to_rome = paul_goes_to_rome;
     }
 
+
+
     public List<StoryKey> getStoryTitleList() {
         List<StoryKey> storyTitleList = new ArrayList<>();
-        storyTitleList.add(the_creation);
-        storyTitleList.add(adam_and_eve);
-        storyTitleList.add(cain_and_abel);
+        storyTitleList.add(the_creation); //list 4
+        storyTitleList.add(adam_and_eve); //list 4
+        storyTitleList.add(cain_and_abel); //list 4
         storyTitleList.add(the_great_flood);
         storyTitleList.add(the_tower_of_babel);
         storyTitleList.add(god_calls_abraham);

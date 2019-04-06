@@ -14,12 +14,13 @@ import com.example.everydaywithbible.view.StoryViewHolder;
 import java.util.List;
 
 public class StoryAdapter extends RecyclerView.Adapter<StoryViewHolder> {
-    private FragmentInterface fragmentInterface;
     private List<StoryKey> storyList;
+    private FragmentInterface fragmentInterface;
 
-    public StoryAdapter(FragmentInterface fragmentInterface, List<StoryKey> storyList) {
-        this.fragmentInterface = fragmentInterface;
+
+    public StoryAdapter(List<StoryKey> storyList, FragmentInterface fragmentInterface) {
         this.storyList = storyList;
+        this.fragmentInterface = fragmentInterface;
     }
 
     @NonNull
@@ -39,7 +40,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryViewHolder> {
         return storyList.size();
     }
 
-    public void setData(List<StoryKey> newStoryTitleList){
+    public void setData(List<StoryKey> newStoryTitleList) {
         this.storyList = newStoryTitleList;
         notifyDataSetChanged();
     }

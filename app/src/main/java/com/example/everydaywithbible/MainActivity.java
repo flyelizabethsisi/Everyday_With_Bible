@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.everydaywithbible.controller.DetailAdapter;
 import com.example.everydaywithbible.fragment.DetailFragment;
 import com.example.everydaywithbible.fragment.FragmentInterface;
 import com.example.everydaywithbible.fragment.TitleFragment;
@@ -29,4 +30,6 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
                 .commit();
 
     }
+
+
 }
