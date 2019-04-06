@@ -15,11 +15,9 @@ import com.example.everydaywithbible.view.DetailViewHolder;
 import java.util.List;
 
 public class DetailAdapter extends RecyclerView.Adapter<DetailViewHolder> {
-    private FragmentInterface fragmentInterface;
-    private List<StoryKey> storyDetailList;
+    private List<StoryValue> storyDetailList;
 
-    public DetailAdapter(FragmentInterface fragmentInterface, List<StoryKey> storyDetailList) {
-        this.fragmentInterface = fragmentInterface;
+    public DetailAdapter(List<StoryValue> storyDetailList) {
         this.storyDetailList = storyDetailList;
     }
 
@@ -32,7 +30,7 @@ public class DetailAdapter extends RecyclerView.Adapter<DetailViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull DetailViewHolder detailViewHolder, int i) {
-        detailViewHolder.onBind(storyDetailList.get(i), fragmentInterface);
+        detailViewHolder.onBind(storyDetailList.get(i));
     }
 
     @Override

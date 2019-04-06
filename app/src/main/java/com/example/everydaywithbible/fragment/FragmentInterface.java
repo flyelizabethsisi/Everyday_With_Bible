@@ -1,7 +1,9 @@
 package com.example.everydaywithbible.fragment;
 
+import com.example.everydaywithbible.model.StoryKey;
+
 public interface FragmentInterface {
-    void toDetailFragment(String title, String author, String bibleVerse, String website);
+    void toDetailFragment(StoryKey story);
 
 
 }
