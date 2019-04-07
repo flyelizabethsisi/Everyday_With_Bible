@@ -1,5 +1,6 @@
 package com.example.everydaywithbible;
 
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -13,18 +14,14 @@ import com.example.everydaywithbible.fragment.TitleFragment;
 import com.example.everydaywithbible.model.StoryKey;
 import com.google.gson.Gson;
 
-public class MainActivity extends AppCompatActivity implements FragmentInterface {
+public class MainActivity extends AppCompatActivity implements FragmentInterface, OnboardingFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SplashFragment splashFragment = SplashFragment.newInstance();
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.activity_container, splashFragment)
-                .commit();
+        toSplashFragment();
 
     }
 
@@ -65,5 +62,10 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.activity_container, detailFragment).addToBackStack(null)
                 .commit();
+    }
+
+    @Override
+    public void onFragmentInteraction() {
+        toTitleFragment();
     }
 }
