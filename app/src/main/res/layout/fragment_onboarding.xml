@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.OnboardingFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/language_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose your language"/>
+    <Button
+        android:id="@+id/english_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="English" />
+    <Button
+        android:id="@+id/spanish_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spanish" />
+    <Button
+        android:id="@+id/french_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="French" />
+    <Button
+        android:id="@+id/portuguese_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Portuguese" />
+    <Button
+        android:id="@+id/chinese_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chinese" />
+
+</LinearLayout>
