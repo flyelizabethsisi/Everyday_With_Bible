@@ -32,10 +32,9 @@ public class DetailViewHolder extends RecyclerView.ViewHolder {
 
     public void onBind(StoryValue storyValue) {
 
-                detailTitleText.setText(storyValue.getTitle());
-                detailAuthorText.setText(storyValue.getAuthor());
-                detailVerseText.setText(storyValue.getBible_ref());
-                // detailWebButton.setText(storyValue.getUrl());
+        detailTitleText.setText(storyValue.getTitle());
+        detailAuthorText.setText(storyValue.getAuthor());
+        detailVerseText.setText(storyValue.getBible_ref());
 
         detailWebButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,8 +44,8 @@ public class DetailViewHolder extends RecyclerView.ViewHolder {
                 itemView.getContext().startActivity(intent);
             }
         });
-            }
-
-
     }
+
+
+}
 

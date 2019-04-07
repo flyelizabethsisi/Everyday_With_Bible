@@ -47,7 +47,6 @@ public class OnboardingFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-
      * @return A new instance of fragment OnboardingFragment.
      */
     // TODO: Rename and change types and number of parameters
@@ -71,9 +70,9 @@ public class OnboardingFragment extends Fragment {
 
 
     // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
+    public void onButtonPressed() {
         if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+            mListener.onFragmentInteraction();
         }
     }
 
@@ -82,7 +81,7 @@ public class OnboardingFragment extends Fragment {
         super.onAttach(context);
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
-      }
+        }
 // else {
 //            throw new RuntimeException(context.toString()
 //                    + " must implement OnFragmentInteractionListener");
@@ -107,7 +106,7 @@ public class OnboardingFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        void onFragmentInteraction();
     }
 
     @Nullable
@@ -130,7 +129,10 @@ public class OnboardingFragment extends Fragment {
         englishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fragmentInterface.toTitleFragment();
+
+                if (mListener != null) {
+                    mListener.onFragmentInteraction();
+                }
             }
         });
 
