@@ -18,8 +18,7 @@ public class DetailViewHolder extends RecyclerView.ViewHolder {
     TextView detailAuthorText;
     TextView detailVerseText;
     Button detailWebButton;
-    Button detailVerseButton;
-    StoryValue storyWeb;
+
 
     public DetailViewHolder(@NonNull View itemView) {
         super(itemView);

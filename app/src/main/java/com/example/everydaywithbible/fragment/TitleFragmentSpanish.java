@@ -1,5 +1,6 @@
 package com.example.everydaywithbible.fragment;
 
+
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,16 +13,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.example.everydaywithbible.R;
+import com.example.everydaywithbible.controller.SpanishStoryAdapter;
 import com.example.everydaywithbible.controller.StoryAdapter;
-import com.example.everydaywithbible.model.StoryData;
 import com.example.everydaywithbible.model.StoryKey;
 import com.example.everydaywithbible.model.StoryResponse;
-import com.example.everydaywithbible.model.StoryValue;
 import com.example.everydaywithbible.network.APIService;
+import com.example.everydaywithbible.network.APIServiceSpanish;
 import com.example.everydaywithbible.network.RetrofitSingleton;
+import com.example.everydaywithbible.network.RetrofitSingletonSpanish;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,24 +33,24 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 
-
-public class TitleFragment extends Fragment implements SearchView.OnQueryTextListener {
-    private static final String TAG = "TitleFragment";
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class TitleFragmentSpanish extends Fragment implements SearchView.OnQueryTextListener {
+    private static final String TAG = "TitleFragmentSpanish";
 
     private FragmentInterface fragmentInterface;
     private SearchView searchView;
-    private StoryAdapter storyAdapter;
+    private SpanishStoryAdapter spanishStoryAdapter;
     private List<StoryKey> storyList = new ArrayList<>();
     private RecyclerView recyclerView;
 
-    public TitleFragment() {
+    public TitleFragmentSpanish() {
     }
 
-
-    // TODO: Rename and change types and number of parameters
-    public static TitleFragment newInstance() {
-        TitleFragment fragment = new TitleFragment();
-        return new TitleFragment();
+    public static TitleFragmentSpanish newInstance() {
+        TitleFragmentSpanish fragment = new TitleFragmentSpanish();
+        return new TitleFragmentSpanish();
     }
 
 
@@ -64,27 +65,25 @@ public class TitleFragment extends Fragment implements SearchView.OnQueryTextLis
                     + " must implement OnFragmentInteractionListener");
         }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_title, container, false);
+        return inflater.inflate(R.layout.fragment_title_fragment_spanish, container, false);
     }
-
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView = view.findViewById(R.id.recycler_view);
-        searchView = view.findViewById(R.id.story_searchView);
+        recyclerView = view.findViewById(R.id.recycler_view_spanish);
+        searchView = view.findViewById(R.id.story_searchView_spanish);
 
-        final Retrofit retrofit = RetrofitSingleton.getInstance();
+        final Retrofit retrofit = RetrofitSingletonSpanish.getInstance();
         Log.d(TAG, "onViewCreated: " + retrofit.toString());
 
-        APIService apiService = retrofit.create(APIService.class);
+        APIServiceSpanish apiService = retrofit.create(APIServiceSpanish.class);
 
         Log.d(TAG, "onViewCreated: apiservice" + apiService.toString() );
-        Observable<StoryResponse> responseCall = apiService.getStoryList();
+        Observable<StoryResponse> responseCall = apiService.getStoryListSpanish();
 
         Log.d(TAG, "onViewCreated: responsecall" + responseCall.toString());
 
@@ -93,14 +92,13 @@ public class TitleFragment extends Fragment implements SearchView.OnQueryTextLis
                 .subscribe(new Consumer<StoryResponse>() {
                     @Override
                     public void accept(StoryResponse response) throws Exception {
-//                        TitleFragment.this.accept(storyData1);
 
                         Log.d(TAG, response.getData().getStoryTitleList().get(0).getTitle() );
                         storyList = response.getData().getStoryTitleList();
-                        storyAdapter = new StoryAdapter(storyList,fragmentInterface);
+                        spanishStoryAdapter = new SpanishStoryAdapter(storyList,fragmentInterface);
                         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-                        recyclerView.setAdapter(storyAdapter);
-                        searchView.setOnQueryTextListener(TitleFragment.this);
+                        recyclerView.setAdapter(spanishStoryAdapter);
+                        searchView.setOnQueryTextListener(TitleFragmentSpanish.this);
 
                     }
                 }, new Consumer<Throwable>() {
@@ -136,7 +134,7 @@ public class TitleFragment extends Fragment implements SearchView.OnQueryTextLis
             }
         }
         Log.d(TAG, "we got here");
-        storyAdapter.setData(newStoryTitleList);
+        spanishStoryAdapter.setData(newStoryTitleList);
         return false;
     }
 }

@@ -9,8 +9,10 @@ import com.example.everydaywithbible.controller.DetailAdapter;
 import com.example.everydaywithbible.fragment.DetailFragment;
 import com.example.everydaywithbible.fragment.FragmentInterface;
 import com.example.everydaywithbible.fragment.OnboardingFragment;
+import com.example.everydaywithbible.fragment.SpanishDetailFragment;
 import com.example.everydaywithbible.fragment.SplashFragment;
 import com.example.everydaywithbible.fragment.TitleFragment;
+import com.example.everydaywithbible.fragment.TitleFragmentSpanish;
 import com.example.everydaywithbible.model.StoryKey;
 import com.google.gson.Gson;
 
@@ -54,6 +56,15 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
                 .commit();
     }
 
+    public void toTitleSpanishFragment() {
+        TitleFragmentSpanish titleFragmentSpanish = TitleFragmentSpanish.newInstance();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.activity_container, titleFragmentSpanish)
+                .addToBackStack(null)
+                .commit();
+    }
+
     @Override
     public void toDetailFragment(StoryKey story) {
         String json = new Gson().toJson(story);
@@ -65,7 +76,23 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
     }
 
     @Override
+    public void toSpanishDetailFragment(StoryKey story) {
+        String json = new Gson().toJson(story);
+
+        SpanishDetailFragment spanishDetailFragment = SpanishDetailFragment.newInstance(json);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.activity_container, spanishDetailFragment).addToBackStack(null)
+                .commit();
+
+    }
+
+    @Override
     public void onFragmentInteraction() {
         toTitleFragment();
+    }
+
+    @Override
+    public void spanishOnFragmentInteration() {
+        toTitleSpanishFragment();
     }
 }
