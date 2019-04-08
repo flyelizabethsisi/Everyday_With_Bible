@@ -107,6 +107,8 @@ public class OnboardingFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction();
+
+        void spanishOnFragmentInteration();
     }
 
     @Nullable
@@ -132,6 +134,16 @@ public class OnboardingFragment extends Fragment {
 
                 if (mListener != null) {
                     mListener.onFragmentInteraction();
+                }
+            }
+        });
+
+        spanishButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (mListener != null) {
+                    mListener.spanishOnFragmentInteration();
                 }
             }
         });

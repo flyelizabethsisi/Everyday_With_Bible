@@ -7,5 +7,7 @@ public interface FragmentInterface {
     void toOnboardingFragment();
     void toTitleFragment();
     void toDetailFragment(StoryKey story);
+    void toTitleSpanishFragment();
+    void toSpanishDetailFragment(StoryKey story);
 
 }

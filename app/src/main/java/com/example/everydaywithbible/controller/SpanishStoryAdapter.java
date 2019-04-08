@@ -9,29 +9,31 @@ import android.view.ViewGroup;
 import com.example.everydaywithbible.R;
 import com.example.everydaywithbible.fragment.FragmentInterface;
 import com.example.everydaywithbible.model.StoryKey;
-import com.example.everydaywithbible.view.StoryViewHolder;
+import com.example.everydaywithbible.view.SpanishStoryViewHolder;
 
 import java.util.List;
 
-public class StoryAdapter extends RecyclerView.Adapter<StoryViewHolder> {
+public class SpanishStoryAdapter extends RecyclerView.Adapter<SpanishStoryViewHolder> {
+
+
     private List<StoryKey> storyList;
     private FragmentInterface fragmentInterface;
 
-    public StoryAdapter(List<StoryKey> storyList, FragmentInterface fragmentInterface) {
+    public SpanishStoryAdapter(List<StoryKey> storyList, FragmentInterface fragmentInterface) {
         this.storyList = storyList;
         this.fragmentInterface = fragmentInterface;
     }
 
     @NonNull
     @Override
-    public StoryViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View childView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_view, viewGroup, false);
-        return new StoryViewHolder(childView);
+    public SpanishStoryViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View childView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_view_spanish, viewGroup, false);
+        return new SpanishStoryViewHolder(childView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull StoryViewHolder storyViewHolder, int i) {
-        storyViewHolder.onBind(storyList.get(i), fragmentInterface);
+    public void onBindViewHolder(@NonNull SpanishStoryViewHolder spanishStoryViewHolder, int i) {
+        spanishStoryViewHolder.onBind(storyList.get(i), fragmentInterface);
     }
 
     @Override
