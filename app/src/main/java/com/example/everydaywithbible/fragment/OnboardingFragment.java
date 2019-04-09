@@ -109,6 +109,8 @@ public class OnboardingFragment extends Fragment {
         void onFragmentInteraction();
 
         void spanishOnFragmentInteration();
+
+        void frenchOnFragmentInteraction();
     }
 
     @Nullable
@@ -144,6 +146,15 @@ public class OnboardingFragment extends Fragment {
 
                 if (mListener != null) {
                     mListener.spanishOnFragmentInteration();
+                }
+            }
+        });
+
+        frenchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mListener != null) {
+                    mListener.frenchOnFragmentInteraction();
                 }
             }
         });

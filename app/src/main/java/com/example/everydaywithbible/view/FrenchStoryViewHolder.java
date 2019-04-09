@@ -9,21 +9,24 @@ import com.example.everydaywithbible.R;
 import com.example.everydaywithbible.fragment.FragmentInterface;
 import com.example.everydaywithbible.model.StoryKey;
 
-public class SpanishStoryViewHolder extends RecyclerView.ViewHolder {
-    private TextView spanishTitleFragmentTextView;
+import org.w3c.dom.Text;
 
-    public SpanishStoryViewHolder(@NonNull View itemView) {
+public class FrenchStoryViewHolder extends RecyclerView.ViewHolder {
+    private TextView frenchTitleFragmentTextView;
+
+    public FrenchStoryViewHolder(@NonNull View itemView) {
         super(itemView);
-        spanishTitleFragmentTextView = itemView.findViewById(R.id.story_title_textView_spanish);
+        frenchTitleFragmentTextView = itemView.findViewById(R.id.story_title_textView_french);
     }
 
+
     public void onBind(final StoryKey story, FragmentInterface fragmentInterface) {
-        spanishTitleFragmentTextView.setText(story.getTitle());
+        frenchTitleFragmentTextView.setText(story.getTitle());
 
         itemView.setOnClickListener(v -> {
             if (story.getAccounts().size() != 0) {
-              //  fragmentInterface.(story);
-                fragmentInterface.toSpanishDetailFragment(story);
+                //  fragmentInterface.(story);
+                fragmentInterface.toFrenchDetailFragment(story);
 
             }
         });

@@ -4,11 +4,10 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RetrofitSingletonSpanish {
-    private static Retrofit instance;
-    private static final String URL = "https://biblestories.org/";
+public class RetrofitSingletonFrench { private static Retrofit instance;
+    private static final String URL = "https://recitsbibliques.com/";
 
-    private RetrofitSingletonSpanish() {
+    private RetrofitSingletonFrench() {
     }
 
     public static Retrofit getInstance() {
@@ -22,3 +21,4 @@ public class RetrofitSingletonSpanish {
         return instance;
     }
 }
+//https://recitsbibliques.com/api/stories

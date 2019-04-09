@@ -8,10 +8,12 @@ import android.support.v7.widget.RecyclerView;
 import com.example.everydaywithbible.controller.DetailAdapter;
 import com.example.everydaywithbible.fragment.DetailFragment;
 import com.example.everydaywithbible.fragment.FragmentInterface;
+import com.example.everydaywithbible.fragment.FrenchDetailFragment;
 import com.example.everydaywithbible.fragment.OnboardingFragment;
 import com.example.everydaywithbible.fragment.SpanishDetailFragment;
 import com.example.everydaywithbible.fragment.SplashFragment;
 import com.example.everydaywithbible.fragment.TitleFragment;
+import com.example.everydaywithbible.fragment.TitleFragmentFrench;
 import com.example.everydaywithbible.fragment.TitleFragmentSpanish;
 import com.example.everydaywithbible.model.StoryKey;
 import com.google.gson.Gson;
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.activity_container, onboardingFragment)
-                .addToBackStack(null)
+                //  .addToBackStack(null)
                 .commit();
     }
 
@@ -87,6 +89,26 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
     }
 
     @Override
+    public void toTitleFrenchFragment() {
+        TitleFragmentFrench titleFragmentFrench = TitleFragmentFrench.newInstance();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.activity_container, titleFragmentFrench)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void toFrenchDetailFragment(StoryKey story) {
+        String json = new Gson().toJson(story);
+
+        FrenchDetailFragment frenchDetailFragment = FrenchDetailFragment.newInstance(json);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.activity_container, frenchDetailFragment).addToBackStack(null)
+                .commit();
+    }
+
+    @Override
     public void onFragmentInteraction() {
         toTitleFragment();
     }
@@ -95,4 +117,11 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
     public void spanishOnFragmentInteration() {
         toTitleSpanishFragment();
     }
+
+    @Override
+    public void frenchOnFragmentInteraction() {
+        toTitleFrenchFragment();
+    }
+
+
 }
