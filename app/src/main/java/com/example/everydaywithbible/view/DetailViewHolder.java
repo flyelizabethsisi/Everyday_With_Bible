@@ -31,9 +31,9 @@ public class DetailViewHolder extends RecyclerView.ViewHolder {
 
     public void onBind(StoryValue storyValue) {
 
-        detailTitleText.setText(storyValue.getTitle());
-        detailAuthorText.setText(storyValue.getAuthor());
-        detailVerseText.setText(storyValue.getBible_ref());
+        detailTitleText.setText("Title: " + storyValue.getTitle());
+        detailAuthorText.setText("Author: " + storyValue.getAuthor());
+        detailVerseText.setText("Bible Verse: " + storyValue.getBible_ref());
 
         detailWebButton.setOnClickListener(new View.OnClickListener() {
             @Override

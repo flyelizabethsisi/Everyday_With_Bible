@@ -29,9 +29,9 @@ public class FrenchDetailViewHolder extends RecyclerView.ViewHolder {
 
     public void onBind(StoryValue storyValue) {
 
-        frenchDetailTitleText.setText(storyValue.getTitle());
-        frenchDetailAuthorText.setText(storyValue.getAuthor());
-        frenchDetailVerseText.setText(storyValue.getBible_ref());
+        frenchDetailTitleText.setText("Le Titre: "+storyValue.getTitle());
+        frenchDetailAuthorText.setText("L'auteur: "+ storyValue.getAuthor());
+        frenchDetailVerseText.setText("Verset De La Bible: "+ storyValue.getBible_ref());
 
         frenchDetailWebButton.setOnClickListener(new View.OnClickListener() {
             @Override

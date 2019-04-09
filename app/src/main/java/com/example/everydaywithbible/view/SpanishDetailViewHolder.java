@@ -29,9 +29,9 @@ public class SpanishDetailViewHolder extends RecyclerView.ViewHolder {
 
     public void onBind(StoryValue storyValue) {
 
-        spanishDetailTitleText.setText(storyValue.getTitle());
-        spanishDetailAuthorText.setText(storyValue.getAuthor());
-        spanishDetailVerseText.setText(storyValue.getBible_ref());
+        spanishDetailTitleText.setText("El título: " + storyValue.getTitle());
+        spanishDetailAuthorText.setText("El Autor: " + storyValue.getAuthor());
+        spanishDetailVerseText.setText("Versículo de la Biblia: " + storyValue.getBible_ref());
 
         spanishDetailWebButton.setOnClickListener(new View.OnClickListener() {
             @Override
