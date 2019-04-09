@@ -9,5 +9,7 @@ public interface FragmentInterface {
     void toDetailFragment(StoryKey story);
     void toTitleSpanishFragment();
     void toSpanishDetailFragment(StoryKey story);
+    void toTitleFrenchFragment();
+    void toFrenchDetailFragment(StoryKey story);
 
 }

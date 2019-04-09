@@ -18,7 +18,7 @@ import com.example.everydaywithbible.R;
  * A simple {@link Fragment} subclass.
  */
 public class SplashFragment extends Fragment {
-    private final int SPLASH_DISPLAY_LENGTH = 3000;
+    private final int SPLASH_DISPLAY_LENGTH = 1500;
     Handler handler;
     FragmentInterface fragmentInterface;
 

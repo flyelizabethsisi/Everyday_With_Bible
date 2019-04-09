@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="140dp"
@@ -19,7 +18,7 @@
 
             <!-- TODO: Update blank fragment layout -->
             <TextView
-                android:id="@+id/spanish_detail_story_title_textView"
+                android:id="@+id/french_detail_story_title_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -29,7 +28,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/spanish_detail_story_author_textView"
+                android:id="@+id/french_detail_story_author_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="casual"
@@ -39,7 +38,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/spanish_detail_story_verse_textView"
+                android:id="@+id/french_detail_story_verse_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="casual"
@@ -50,13 +49,12 @@
 
 
             <Button
-                android:id="@+id/spanish_detail_story_web_button"
+                android:id="@+id/french_detail_story_web_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ver Historia" />
+                android:text="Voir L'histoire" />
 
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
-
 </LinearLayout>

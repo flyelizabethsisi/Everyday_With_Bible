@@ -14,10 +14,10 @@ import com.example.everydaywithbible.model.StoryKey;
 import com.example.everydaywithbible.model.StoryValue;
 
 public class DetailViewHolder extends RecyclerView.ViewHolder {
-    TextView detailTitleText;
-    TextView detailAuthorText;
-    TextView detailVerseText;
-    Button detailWebButton;
+   private TextView detailTitleText;
+   private TextView detailAuthorText;
+  private   TextView detailVerseText;
+  private   Button detailWebButton;
 
 
     public DetailViewHolder(@NonNull View itemView) {

@@ -12,16 +12,17 @@ import com.example.everydaywithbible.R;
 import com.example.everydaywithbible.model.StoryValue;
 
 public class SpanishDetailViewHolder extends RecyclerView.ViewHolder {
-    TextView spanishDetailTitleText;
-    TextView spanishDetailAuthorText;
-    TextView spanishDetailVerseText;
-    Button spanishDetailWebButton;
+    private TextView spanishDetailTitleText;
+    private TextView spanishDetailAuthorText;
+    private TextView spanishDetailVerseText;
+    private Button spanishDetailWebButton;
 
 
     public SpanishDetailViewHolder(@NonNull View itemView) {
         super(itemView);
         spanishDetailTitleText = itemView.findViewById(R.id.spanish_detail_story_title_textView);
         spanishDetailAuthorText = itemView.findViewById(R.id.spanish_detail_story_author_textView);
+        spanishDetailVerseText = itemView.findViewById(R.id.spanish_detail_story_verse_textView);
         spanishDetailWebButton = itemView.findViewById(R.id.spanish_detail_story_web_button);
 
     }
