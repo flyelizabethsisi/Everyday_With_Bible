@@ -21,7 +21,7 @@
 
             <!-- TODO: Update blank fragment layout -->
             <TextView
-                android:id="@+id/spanish_detail_story_title_textView"
+                android:id="@+id/portuguese_detail_story_title_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
@@ -31,7 +31,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/spanish_detail_story_author_textView"
+                android:id="@+id/portuguese_detail_story_author_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
@@ -40,7 +40,7 @@
                 android:textSize="18dp" />
 
             <TextView
-                android:id="@+id/spanish_detail_story_verse_textView"
+                android:id="@+id/portuguese_detail_story_verse_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
@@ -51,14 +51,14 @@
 
 
             <Button
-                android:id="@+id/spanish_detail_story_web_button"
+                android:id="@+id/portuguese_detail_story_web_button"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/colorPrimary"
                 android:fontFamily="sans-serif"
                 android:gravity="center"
-                android:text="Leer Historia"
+                android:text="leia a história"
                 android:textColor="#FFFF"
                 android:textSize="18dp"
                 android:textStyle="bold" />
