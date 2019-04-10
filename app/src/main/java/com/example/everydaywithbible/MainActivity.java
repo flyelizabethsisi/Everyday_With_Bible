@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.everydaywithbible.controller.DetailAdapter;
+import com.example.everydaywithbible.fragment.ChineseDetailFragment;
 import com.example.everydaywithbible.fragment.DetailFragment;
 import com.example.everydaywithbible.fragment.FragmentInterface;
 import com.example.everydaywithbible.fragment.FrenchDetailFragment;
@@ -18,6 +19,7 @@ import com.example.everydaywithbible.fragment.PortugueseDetailFragment;
 import com.example.everydaywithbible.fragment.SpanishDetailFragment;
 import com.example.everydaywithbible.fragment.SplashFragment;
 import com.example.everydaywithbible.fragment.TitleFragment;
+import com.example.everydaywithbible.fragment.TitleFragmentChinese;
 import com.example.everydaywithbible.fragment.TitleFragmentFrench;
 import com.example.everydaywithbible.fragment.TitleFragmentPortuguese;
 import com.example.everydaywithbible.fragment.TitleFragmentSpanish;
@@ -166,6 +168,26 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
     }
 
     @Override
+    public void toTitleChineseFragment() {
+        TitleFragmentChinese titleFragmentChinese = TitleFragmentChinese.newInstance();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.activity_container, titleFragmentChinese)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void toChineseDetailFragment(StoryKey story) {
+        String json = new Gson().toJson(story);
+
+        ChineseDetailFragment chineseDetailFragment = ChineseDetailFragment.newInstance(json);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.activity_container, chineseDetailFragment).addToBackStack(null)
+                .commit();
+    }
+
+    @Override
     public void onFragmentInteraction() {
         toTitleFragment();
     }
@@ -183,6 +205,11 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
     @Override
     public void portugueseOnFragmentInteraction() {
         toTitlePortugueseFragment();
+    }
+
+    @Override
+    public void chineseOnFragmentInteraction() { toTitleChineseFragment();
+
     }
 
 
