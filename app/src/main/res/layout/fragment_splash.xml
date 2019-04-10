@@ -11,9 +11,9 @@
     <!-- TODO: Update blank fragment layout -->
     <ImageView
         android:id="@+id/logo"
-        app:srcCompat="@drawable/logoeveryday"
-        android:paddingLeft="80dp"
-        android:layout_width="340dp"
+        app:srcCompat="@drawable/headache"
+android:layout_gravity="center"
+        android:layout_width="280dp"
         android:layout_height="match_parent"
          />
 
