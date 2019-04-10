@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/github_menu"
+    android:title="GitHub Link"/>
+    <item
+        android:id="@+id/linked_in"
+        android:title="LinkedIn Link"/>
+
+</menu>
