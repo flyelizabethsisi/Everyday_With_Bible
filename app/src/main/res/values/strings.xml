@@ -3,4 +3,15 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chineseDetailButton">读故事</string>
+    <string name="read_story">Read Story</string>
+    <string name="chinese_button">简化字</string>
+    <string name="portuguese_button">Português</string>
+    <string name="francais_button">Français</string>
+    <string name="espanol_button">Español</string>
+    <string name="english_button">English</string>
+    <string name="lire_l_histoire">Lire L\'histoire</string>
+    <string name="bible_hint">bible</string>
+    <string name="portuguese_detail_button">leia a história</string>
+    <string name="spanish_detail_button">Leer Historia</string>
 </resources>
