@@ -18,9 +18,9 @@
         android:backgroundTint="@color/colorPrimaryDark"
         android:fontFamily="@font/josefin_sans_bold"
         android:gravity="center"
-        android:text="English"
+        android:text="@string/english_button"
         android:textColor="#FFFF"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <Button
@@ -31,9 +31,9 @@
         android:backgroundTint="@color/colorPrimaryDark"
         android:fontFamily="@font/josefin_sans_bold"
         android:gravity="center"
-        android:text="Español"
+        android:text="@string/espanol_button"
         android:textColor="#FFFF"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <Button
@@ -44,9 +44,9 @@
         android:backgroundTint="@color/colorPrimaryDark"
         android:fontFamily="@font/josefin_sans_bold"
         android:gravity="center"
-        android:text="Français"
+        android:text="@string/francais_button"
         android:textColor="#FFFF"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <Button
@@ -57,9 +57,9 @@
         android:backgroundTint="@color/colorPrimaryDark"
         android:fontFamily="@font/josefin_sans_bold"
         android:gravity="center"
-        android:text="Português"
+        android:text="@string/portuguese_button"
         android:textColor="#FFFF"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <Button
@@ -70,9 +70,9 @@
         android:backgroundTint="@color/colorPrimaryDark"
         android:fontFamily="@font/josefin_sans_bold"
         android:gravity="center"
-        android:text="简化字"
+        android:text="@string/chinese_button"
         android:textColor="#FFFF"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
 </LinearLayout>

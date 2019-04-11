@@ -15,9 +15,8 @@
             android:id="@+id/story_title_textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily=""
             android:gravity="center"
-            android:hint="bible"
+            android:hint="@string/bible_hint"
             android:textSize="24sp"
             android:textStyle="bold"
             app:fontFamily="@font/josefin_sans_bold" />
