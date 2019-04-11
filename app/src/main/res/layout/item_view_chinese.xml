@@ -16,7 +16,7 @@
             android:id="@+id/story_title_textView_chinese"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
+            app:fontFamily="@font/josefin_sans_bold"
             android:gravity="center"
             android:textSize="24sp"
             android:textStyle="bold" />
