@@ -14,4 +14,23 @@
     <string name="bible_hint">bible</string>
     <string name="portuguese_detail_button">leia a história</string>
     <string name="spanish_detail_button">Leer Historia</string>
+    <string name="chinese_detail_text">标题: %s</string>
+    <string name="chinese_author_text">作者: %s</string>
+    <string name="chinese_verse_text">圣经经文: %s</string>
+    <string name="english_title_text">Title: %s</string>
+    <string name="english_author_text">Author: %s</string>
+    <string name="english_verse_text">Bible Verse: %s</string>
+    <string name="english_null_author">Author: -</string>
+    <string name="french_detail_title">Le Titre: %s</string>
+    <string name="french_detail_author">L\'auteur: %s</string>
+    <string name="french_detail_verse">Verset De La Bible: %s</string>
+    <string name="french_null_author">L\'auteur: -</string>
+    <string name="portuguese_detail_title">O Título: %s</string>
+    <string name="portuguese_detail_author">O Autor: %s</string>
+    <string name="portuguese_detail_verse">Verso Da Bíblia: %s</string>
+    <string name="portuguese_null_author">O Autor: -</string>
+    <string name="spanish_detail_title">El título: %s</string>
+    <string name="spanish_author_detail">El Autor: %s</string>
+    <string name="spanish_verse_detail">Versículo de la Biblia: %s</string>
+    <string name="spanish_null_author">El Autor: -</string>
 </resources>

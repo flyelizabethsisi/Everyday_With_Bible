@@ -14,10 +14,10 @@ import com.example.everydaywithbible.model.StoryKey;
 import com.example.everydaywithbible.model.StoryValue;
 
 public class DetailViewHolder extends RecyclerView.ViewHolder {
-   private TextView detailTitleText;
-   private TextView detailAuthorText;
-  private   TextView detailVerseText;
-  private   Button detailWebButton;
+    private TextView detailTitleText;
+    private TextView detailAuthorText;
+    private TextView detailVerseText;
+    private Button detailWebButton;
 
 
     public DetailViewHolder(@NonNull View itemView) {
@@ -31,9 +31,12 @@ public class DetailViewHolder extends RecyclerView.ViewHolder {
 
     public void onBind(StoryValue storyValue) {
 
-        detailTitleText.setText("Title: " + storyValue.getTitle());
-        detailAuthorText.setText("Author: " + storyValue.getAuthor());
-        detailVerseText.setText("Bible Verse: " + storyValue.getBible_ref());
+        detailTitleText.setText(itemView.getContext().getString(R.string.english_title_text, storyValue.getTitle()));
+        detailAuthorText.setText(itemView.getContext().getString(R.string.english_author_text, storyValue.getAuthor()));
+        detailVerseText.setText(itemView.getContext().getString(R.string.english_verse_text, storyValue.getBible_ref()));
+        if (storyValue.getAuthor() == null) {
+            detailAuthorText.setText(itemView.getContext().getString(R.string.english_null_author));
+        }
 
         detailWebButton.setOnClickListener(new View.OnClickListener() {
             @Override

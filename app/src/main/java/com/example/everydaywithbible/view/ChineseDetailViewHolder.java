@@ -25,12 +25,15 @@ public class ChineseDetailViewHolder extends RecyclerView.ViewHolder {
         chineseDetailVerseText = itemView.findViewById(R.id.chinese_detail_story_verse_textView);
         chineseDetailWebButton = itemView.findViewById(R.id.chinese_detail_story_web_button);
     }
+
     public void onBind(StoryValue storyValue) {
 
-        chineseDetailTitleText.setText("标题: "+storyValue.getTitle());
-        chineseDetailAuthorText.setText("作者: "+ storyValue.getAuthor());
-        chineseDetailVerseText.setText("圣经经文: "+ storyValue.getBible_ref());
-
+        chineseDetailTitleText.setText(itemView.getContext().getString(R.string.chinese_detail_text, storyValue.getTitle()));
+        chineseDetailAuthorText.setText(itemView.getContext().getString(R.string.chinese_author_text, storyValue.getAuthor()));
+        chineseDetailVerseText.setText(itemView.getContext().getString(R.string.chinese_verse_text, storyValue.getBible_ref()));
+        if (storyValue.getAuthor() == null) {
+            chineseDetailAuthorText.setText("作者: -");
+        }
         chineseDetailWebButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
