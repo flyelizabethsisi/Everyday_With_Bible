@@ -29,10 +29,12 @@ public class PortugueseDetailViewHolder extends RecyclerView.ViewHolder {
 
     public void onBind(StoryValue storyValue) {
 
-        portugueseDetailTitleText.setText("O Título: " + storyValue.getTitle());
-        portugueseDetailAuthorText.setText("O Autor: " + storyValue.getAuthor());
-        portugueseDetailVerseText.setText("Verso Da Bíblia: " + storyValue.getBible_ref());
-
+        portugueseDetailTitleText.setText(itemView.getContext().getString(R.string.portuguese_detail_title, storyValue.getTitle()));
+        portugueseDetailAuthorText.setText(itemView.getContext().getString(R.string.portuguese_detail_author, storyValue.getAuthor()));
+        portugueseDetailVerseText.setText(itemView.getContext().getString(R.string.portuguese_detail_verse, storyValue.getBible_ref()));
+        if (storyValue.getAuthor() == null) {
+            portugueseDetailAuthorText.setText(itemView.getContext().getString(R.string.portuguese_null_author));
+        }
         portugueseDetailWebButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
